@@ -1,22 +1,22 @@
 {
   "site": {
-    "url": "https://gyoza.lxchapu.com",
-    "title": "Gyoza",
-    "description": "这是一个使用 Astro 和 React 开发的博客主题。",
-    "keywords": "Gyoza,blog,Astro,theme,lxchapu,博客主题",
+    "url": "https://wangtopia.top",
+    "title": "一隅天光",
+    "description": "这在小小角落里，探寻生活的光亮与真知",
+    "keywords": "一隅天光,个人博客,技术博客,生活随笔,编程,阅读,思考",
     "lang": "zh-CN",
     "favicon": "/favicon.ico",
     "appleTouchIcon": "/apple-touch-icon.png"
   },
   "author": {
-    "name": "lxchapu",
-    "twitterId": "@lxchapu",
-    "avatar": "https://s2.loli.net/2024/04/30/ozsnuS5Ihf3xMBG.webp"
+    "name": "王同学",
+    "twitterId": "@LocusRyon",
+    "avatar": "https://img.wangtopia.top/202501/avatar.png"
   },
   "hero": {
-    "name": "Gyoza",
-    "bio": "A static blog template build with Astro and React.",
-    "description": "Clean, Cute, Fast.",
+    "name": "一隅天光",
+    "bio": "在小小角落里，探寻生活的光亮与真知",
+    "description": "记录技术、思考与生活",
     "socials": [
       {
         "name": "Github",
@@ -37,7 +37,15 @@
         "color": "rgb(212, 70, 56)"
       }
     ],
-    "yiyan": "当第一颗卫星飞向大气层外，我们便以为自己终有一日会征服宇宙。"
+    "yiyan": [
+      "一隅之地，天光乍现",
+      "既见乌托邦，何妨不远方",
+      "在有限中见无限，于渺小处观天地",
+      "光不必惊天，但须自照",
+      "纸上得来终觉浅，绝知此事要躬行",
+      "人生如逆旅，我亦是行人",
+      "世事洞明皆学问，人情练达即文章"
+    ]
   },
   "color": {
     "accent": [
