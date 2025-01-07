@@ -23,12 +23,17 @@ export function AnimatedLogo() {
 
 function Logo() {
   return (
-    <a className="block" href="/" title="Nav to home">
+    <a 
+      href="/" 
+      className="flex items-center gap-3 hover:opacity-80 transition-opacity cursor-pointer min-w-max" 
+      title="返回首页"
+    >
       <img
-        className="size-[40px] select-none object-cover rounded-2xl"
+        className="size-[40px] select-none object-cover rounded-2xl pointer-events-none"
         src={author.avatar}
         alt="Site owner avatar"
       />
+      <span className="text-lg whitespace-nowrap pointer-events-none min-w-max">一隅天光</span>
     </a>
   )
 }

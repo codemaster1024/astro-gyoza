@@ -5,13 +5,13 @@
     "description": "这在小小角落里，探寻生活的光亮与真知",
     "keywords": "一隅天光,个人博客,技术博客,生活随笔,编程,阅读,思考",
     "lang": "zh-CN",
-    "favicon": "/favicon.ico",
+    "favicon": "https://img.wangtopia.top/202501/avatar.webp",
     "appleTouchIcon": "/apple-touch-icon.png"
   },
   "author": {
     "name": "王同学",
     "twitterId": "@LocusRyon",
-    "avatar": "https://img.wangtopia.top/202501/avatar.png"
+    "avatar": "https://img.wangtopia.top/202501/avatar.webp"
   },
   "hero": {
     "name": "一隅天光",
@@ -21,19 +21,19 @@
       {
         "name": "Github",
         "icon": "icon-github",
-        "url": "https://github.com/lxchapu/astro-gyoza",
+        "url": "https://github.com/codemaster1024",
         "color": "rgb(24, 23, 23)"
       },
       {
         "name": "X",
         "icon": "icon-x",
-        "url": "https://twitter.com/lxchapu",
+        "url": "https://x.com/LocusRyon",
         "color": "rgb(36, 46, 54)"
       },
       {
         "name": "Email",
         "icon": "icon-mail",
-        "url": "mailto:lxchapu@outlook.com",
+        "url": "mailto:locuswq@gmail.com",
         "color": "rgb(212, 70, 56)"
       }
     ],
@@ -103,16 +103,16 @@
     "perPage": 10
   },
   "footer": {
-    "startTime": "2024-04-14T00:00:00Z"
+    "startTime": "2022-07-20T00:00:00Z"
   },
   "waline": {
     "serverURL": "https://waline.lxchapu.com"
   },
   "sponsor": {
-    "wechat": "https://object.lxchapu.com/bed%2F2024%2F0507_6e3e8f73df2d4e6d.webp"
+    "wechat": "https://img.wangtopia.top/202501/wxpay.webp"
   },
   "analytics": {
-    "enable": false,
+    "enable": true,
     "google": {
       "measurementId": ""
     },

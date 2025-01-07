@@ -1,8 +1,8 @@
-import { pageScrollLocationAtom, pageScrollDirectionAtom } from '@/store/scrollInfo'
-import type { MarkdownHeading } from 'astro'
-import clsx from 'clsx'
 import { useAtomValue } from 'jotai'
 import { startTransition, useEffect, useRef, useState } from 'react'
+import clsx from 'clsx'
+import { pageScrollLocationAtom, pageScrollDirectionAtom } from '@/store/scrollInfo'
+import type { MarkdownHeading } from 'astro'
 
 function useActiveItem() {
   const [activeItem, setActiveItem] = useState('')
@@ -12,6 +12,12 @@ function useActiveItem() {
     const $article = document.querySelector('#markdown-wrapper')
     if (!$article) return
     const $headings = Array.from($article.querySelectorAll('h1,h2,h3,h4,h5,h6'))
+    
+    if (scrollY === 0 && $headings.length > 0) {
+      setActiveItem($headings[0].id)
+      return
+    }
+    
     for (let i = 0; i < $headings.length; i++) {
       const item = $headings[i]
       const nextItem = $headings[i + 1]
@@ -34,27 +40,29 @@ export function PostToc({ headings }: { headings: MarkdownHeading[] }) {
   const activeItem = useActiveItem()
 
   return (
-    <ul
-      className="relative overflow-y-auto space-y-2 group text-sm"
-      style={{
-        maxHeight: 'min(380px, calc(100vh - 250px))',
-        scrollbarWidth: 'none',
-      }}
-    >
-      {headings.map((item) => (
-        <TocItem
-          key={item.slug}
-          slug={item.slug}
-          text={item.text}
-          depth={item.depth}
-          isActive={item.slug === activeItem}
-        />
-      ))}
-    </ul>
+    <nav>
+      <ul
+        className="relative overflow-y-auto space-y-1 text-sm"
+        style={{
+          maxHeight: 'min(380px, calc(100vh - 250px))',
+          scrollbarWidth: 'none',
+        }}
+      >
+        {headings.map((item) => (
+          <TocItem
+            key={item.slug}
+            slug={item.slug}
+            text={item.text}
+            depth={item.depth}
+            isActive={item.slug === activeItem}
+          />
+        ))}
+      </ul>
+    </nav>
   )
 }
 
-export function TocItem({
+function TocItem({
   slug,
   text,
   depth,
@@ -86,30 +94,67 @@ export function TocItem({
     if (itemTop < 0 || itemBottom > containerHeight) {
       if (scrollDirection === 'up') {
         $container.scrollTop = itemOffsetTop - containerHeight + itemHeight
-
       } else {
         $container.scrollTop = itemOffsetTop
       }
     }
-  }, [isActive])
+  }, [isActive, scrollDirection])
 
   return (
-    <li className="relative" ref={itemRef}>
-      <span
+    <li
+      className={clsx(
+        "relative list-none group",
+        isActive && "text-accent"
+      )}
+      ref={itemRef}
+    >
+      {/* 左侧竖线 */}
+      <div 
         className={clsx(
-          'absolute left-0 top-2 h-1 rounded-full',
-          isActive ? 'bg-accent' : 'bg-zinc-300 dark:bg-zinc-700',
+          'absolute left-0 top-0 bottom-0 w-px transition-colors',
+          isActive ? 'bg-accent' : 'bg-zinc-200 dark:bg-zinc-700'
         )}
-        style={{ width: `${4 * (7 - depth)}px` }}
-      ></span>
+        style={{ 
+          left: `${(depth - 1) * 12}px`
+        }}
+      />
+      {/* 横线指示器 */}
+      <div
+        className={clsx(
+          'absolute h-px transition-colors',
+          isActive ? 'bg-accent' : 'bg-zinc-200 dark:bg-zinc-700 group-hover:bg-zinc-400 dark:group-hover:bg-zinc-500'
+        )}
+        style={{ 
+          left: `${(depth - 1) * 12}px`,
+          width: '12px',
+          top: '50%'
+        }}
+      />
       <a
-        className={clsx(
-          'inline-block pl-8 opacity-0 transition-opacity duration-300',
-          isActive ? 'opacity-100' : 'group-hover:opacity-100 text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100',
-        )}
         href={`#${slug}`}
+        onClick={(e) => {
+          e.preventDefault();
+          const element = document.getElementById(slug);
+          if (element) {
+            const offset = 80; // 导航栏高度，根据实际情况调整
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: "smooth"
+            });
+          }
+        }}
+        className={clsx(
+          'block py-2 text-inherit no-underline transition-colors duration-200',
+          !isActive && 'text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-200'
+        )}
+        style={{
+          paddingLeft: `${depth * 16}px`
+        }}
       >
-        <span>{text}</span>
+        {text}
       </a>
     </li>
   )
