@@ -120,7 +120,7 @@ docker system prune -a --volumes
 
 现在你可以使用`apt`像卸载其他软件包一样来卸载 Docker：
 
-```undefined
+```shell
 sudo apt purge docker-ce
 sudo apt autoremove
 ```
