@@ -4,27 +4,37 @@ description: 这是一份站长的自述报告，请查收。
 comments: false
 ---
 
-## 关于 Gyoza
+## 关于我
 
-Gyoza 是一个使用 Astro 和 React 开发的博客主题。Gyoza 借鉴了 [Shiro](https://github.com/innei/Shiro) 和一些网站的设计。
+# 👋 Hello World!
 
-Gyoza 的核心理念是简洁，快速，可爱。
+欢迎来到我的小天地！我是一名：
 
-- 在 [Markdown 示例](/posts/markdown) 中展示了 Markdown 的渲染样式
-- 可以前往 [Gyoza 使用指南](/posts/guide) 了解 Gyoza 的使用方法
+## 🧑‍💻 职业打码人
 
-Gyoza 是开源的，如果你对这个项目感兴趣，欢迎前往 Gyoza 的 [Github 仓库](https://github.com/lxchapu/astro-gyoza) 来提 Issue 或者 PR。
+在一家小而美的公司担任Java开发工程师。专业修bug,业余制造bug。
+如果你的程序正常运行，那一定是我写代码时忘记加些有趣的特性了。
 
-## 关于作者
+## 📸 周末摄影师
 
-我是 lxchapu，是一名前端开发者，喜欢各种有趣的东西。欢迎访问我的个人网站 [www.lxchapu.com](https://www.lxchapu.com)，了解关于我更多的信息。
+热爱用相机记录生活中的美好瞬间。
+最擅长拍摄：路边的野花、天空的云彩、还有各种不小心入镜的手指。
 
-## 致谢
+## 🏃‍♂️ 退役跑者
 
-感谢以下项目：
+曾经是一名充满激情的跑步爱好者，直到我的膝盖...
+现在偶尔散散步,感受生活的节奏。毕竟,慢慢来也是一种态度！
 
-- [Astro](https://astro.build/)
-- [React](https://reactjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [Jotai](https://jotai.org/)
+## 📚 终身学习者
+
+最近迷上了个人成长类书籍。
+努力让自己成为一个更好的人，虽然有时候看完就忘，但至少看的时候很投入！
+
+### 🤔 你可能不知道的事：
+
+- 我的代码里藏着无数注释掉的"灵感"
+- 摄影包里最重的是零食而不是器材
+- 看书时最爱在句子下面画线，但从不复习
+- 总觉得明天就能重新开始跑步
+
+_"如果你觉得这个页面有点特别，那是因为它确实很特别 —— 特别像其他程序员的个人介绍页面 😂"_
