@@ -1,9 +1,9 @@
 {
   "site": {
     "url": "https://wangtopia.top",
-    "title": "一隅天光",
+    "title": "王同学",
     "description": "这在小小角落里，探寻生活的光亮与真知",
-    "keywords": "一隅天光,个人博客,技术博客,生活随笔,编程,阅读,思考",
+    "keywords": "个人博客,技术博客,生活随笔,编程,阅读,思考",
     "lang": "zh-CN",
     "favicon": "https://img.wangtopia.top/202501/avatar.webp",
     "appleTouchIcon": "/apple-touch-icon.png"
@@ -14,7 +14,7 @@
     "avatar": "https://img.wangtopia.top/202501/avatar.webp"
   },
   "hero": {
-    "name": "一隅天光",
+    "name": "王同学",
     "bio": "在小小角落里，探寻生活的光亮与真知",
     "description": "记录技术、思考与生活",
     "socials": [

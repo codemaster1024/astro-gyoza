@@ -18,7 +18,7 @@ avatar: 头像地址
 例如我：
 
 ```yml
-title: 一隅天光
+title: 王同学
 description: 这在小小角落里，探寻生活的光亮与真知
 link: https://wangtopia.top/
 avatar: https://img.wangtopia.top/202501/avatar.webp
