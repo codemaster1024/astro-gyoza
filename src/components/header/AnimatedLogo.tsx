@@ -33,7 +33,7 @@ function Logo() {
         src={author.avatar}
         alt="Site owner avatar"
       />
-      <span className="text-lg whitespace-nowrap pointer-events-none min-w-max">一隅天光</span>
+      <span className="text-lg whitespace-nowrap pointer-events-none min-w-max">王同学</span>
     </a>
   )
 }
