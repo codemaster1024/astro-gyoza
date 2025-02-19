@@ -91,6 +91,8 @@ function HeaderMenu({ isBgShow }: { isBgShow: boolean }) {
             title={menu.name}
             icon={menu.icon}
             isActive={pathName === menu.link}
+            external={menu.external}
+            target={menu.target}
           />
         ))}
       </div>
@@ -103,16 +105,22 @@ function HeaderMenuItem({
   isActive,
   title,
   icon,
+  external,
+  target,
 }: {
   href: string
   isActive: boolean
   title: string
   icon: string
+  external?: boolean
+  target?: string
 }) {
   return (
     <a
       className={clsx('relative block px-4 py-1.5', isActive ? 'text-accent' : 'hover:text-accent')}
       href={href}
+      target={external ? (target || '_blank') : undefined}
+      rel={external ? 'noopener noreferrer' : undefined}
     >
       <div className="flex space-x-2">
         {isActive && (

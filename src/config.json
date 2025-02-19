@@ -27,7 +27,7 @@
       {
         "name": "X",
         "icon": "icon-x",
-        "url": "https://x.com/LocusRyon",
+        "url": "https://x.com",
         "color": "rgb(36, 46, 54)"
       },
       {
@@ -37,15 +37,7 @@
         "color": "rgb(212, 70, 56)"
       }
     ],
-    "yiyan": [
-      "一隅之地，天光乍现",
-      "既见乌托邦，何妨不远方",
-      "在有限中见无限，于渺小处观天地",
-      "光不必惊天，但须自照",
-      "纸上得来终觉浅，绝知此事要躬行",
-      "人生如逆旅，我亦是行人",
-      "世事洞明皆学问，人情练达即文章"
-    ]
+    "yiyan": ["既见乌托邦，何妨不远方"]
   },
   "color": {
     "accent": [
@@ -84,9 +76,11 @@
       "icon": "icon-archive"
     },
     {
-      "name": "项目",
-      "link": "/projects",
-      "icon": "icon-flask"
+      "name": "相册",
+      "link": "https://photo.wangtopia.top",
+      "icon": "icon-camera",
+      "external": true,
+      "target": "_blank"
     },
     {
       "name": "关于",
