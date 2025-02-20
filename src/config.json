@@ -78,7 +78,7 @@
     {
       "name": "相册",
       "link": "https://photo.wangtopia.top",
-      "icon": "icon-camera",
+      "icon": "icon-instagram",
       "external": true,
       "target": "_blank"
     },
